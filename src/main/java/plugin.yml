@@ -1,0 +1,8 @@
+name: CratePlugin
+description: wdym?
+author: yeboiCravez
+version: 1.0
+main: cratesPackage.CratesMain
+commands:
+ crates:
+   description: shows your crate key balance
