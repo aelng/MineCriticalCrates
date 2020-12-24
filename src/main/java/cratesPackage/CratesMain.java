@@ -3,6 +3,7 @@ package cratesPackage;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import commands.CrateBalanceCommand;
+import events.InventoryClick;
 import events.OpenChest;
 
 public class CratesMain extends JavaPlugin{
@@ -12,6 +13,7 @@ public class CratesMain extends JavaPlugin{
 		cM = new CratesManager(this);
 		getCommand("crates").setExecutor(new CrateBalanceCommand(this));
 		getServer().getPluginManager().registerEvents(new OpenChest(this), this);
+		getServer().getPluginManager().registerEvents(new InventoryClick(this), this);
 		
 	}
 }
