@@ -20,6 +20,34 @@ public class InventoryClick implements Listener{
 		if(e.getClickedInventory() != null) {
 			if(e.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.GOLD + "Open " + "Crates")) {
 				e.setCancelled(true);
+switch (e.getCurrentItem().getType()) {
+				
+				case STAINED_GLASS_PANE:
+					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GOLD + "LEGENDARY CRATE") {
+						
+					}
+					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.DARK_PURPLE + "EXOTIC CRATE") {
+
+					}
+
+					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GRAY + "DAILY CRATE") {
+						
+					}
+					
+					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.DARK_RED + "TYSON CRATE") {
+						
+					}
+					p.closeInventory();
+					break;
+				case BARRIER:	
+					p.sendMessage(ChatColor.GREEN + "You have selected " + ChatColor.DARK_GREEN + "TOXIN");
+					p.closeInventory();
+					break;
+					
+					default:
+						break;
+					
+}
 			}
 		}
 	}
