@@ -22,6 +22,12 @@ public class CratesManager {
 	}
 	
 	public void selectCrate(Player p) {
+		if(plugin.cM.Daily.get(p.getUniqueId().toString()) == null){
+			plugin.cM.Daily.put(p.getUniqueId().toString(), 0);
+			plugin.cM.Exotic.put(p.getUniqueId().toString(), 0);
+			plugin.cM.Tyson.put(p.getUniqueId().toString(), 0);
+			plugin.cM.Legendary.put(p.getUniqueId().toString(), 0);
+		}
         ItemStack CANCEL = new ItemStack(Material.BARRIER, 1);
         ItemMeta CANCEL_meta = CANCEL.getItemMeta();
         ArrayList<String> CANCEL_lore = new ArrayList<>();

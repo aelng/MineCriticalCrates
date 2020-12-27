@@ -20,22 +20,30 @@ public class InventoryClick implements Listener{
 		if(e.getClickedInventory() != null) {
 			if(e.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.GOLD + "Open " + "Crates")) {
 				e.setCancelled(true);
-switch (e.getCurrentItem().getType()) {
+				switch (e.getCurrentItem().getType()) {
 				
 				case STAINED_GLASS_PANE:
-					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GOLD + "LEGENDARY CRATE") {
-						
+					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "LEGENDARY CRATE")) {
+						if(plugin.cM.Legendary.get(p.getUniqueId().toString()) > 0) {
+							p.sendMessage("TESTING1");
+						}
 					}
-					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.DARK_PURPLE + "EXOTIC CRATE") {
-
+					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "EXOTIC CRATE")) {
+						if(plugin.cM.Exotic.get(p.getUniqueId().toString()) > 0) {
+							p.sendMessage("TESTING2");
+						}
 					}
 
-					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GRAY + "DAILY CRATE") {
-						
+					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "DAILY CRATE")) {
+						if(plugin.cM.Daily.get(p.getUniqueId().toString()) > 0) {
+							p.sendMessage("TESTING3");
+						}
 					}
 					
-					if(e.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.DARK_RED + "TYSON CRATE") {
-						
+					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "TYSON CRATE")) {
+						if(plugin.cM.Tyson.get(p.getUniqueId().toString()) > 0) {
+							p.sendMessage("TESTING4");
+						}
 					}
 					p.closeInventory();
 					break;

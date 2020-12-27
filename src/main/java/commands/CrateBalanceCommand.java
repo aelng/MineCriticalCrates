@@ -20,10 +20,10 @@ CratesMain plugin;
 		if(sender instanceof Player) {
 			Player player = (Player) sender; 
 			if(plugin.cM.Daily.get(player.getUniqueId().toString()) == null){
-				plugin.cM.Daily.put(player.getUniqueId().toString(), 0);
-				plugin.cM.Exotic.put(player.getUniqueId().toString(), 0);
-				plugin.cM.Tyson.put(player.getUniqueId().toString(), 0);
-				plugin.cM.Legendary.put(player.getUniqueId().toString(), 0);
+				plugin.cM.Daily.put(player.getUniqueId().toString(), 1);
+				plugin.cM.Exotic.put(player.getUniqueId().toString(), 1);
+				plugin.cM.Tyson.put(player.getUniqueId().toString(), 1);
+				plugin.cM.Legendary.put(player.getUniqueId().toString(), 1);
 			}
 			
 			player.sendMessage(ChatColor.DARK_GRAY + "-------" + ChatColor.RED + "<" + ChatColor.BLUE + "CRATE" + ChatColor.RED + "KEYS" + ChatColor.BLUE + ">" + ChatColor.DARK_GRAY + "-------");
