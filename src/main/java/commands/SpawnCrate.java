@@ -1,5 +1,9 @@
 package commands;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,11 +25,15 @@ CratesMain plugin;
 		if(sender instanceof Player) {
 			Player p = (Player) sender;
 			
-			ArmorStand hologram  = (ArmorStand) p.getWorld().spawnEntity(p.getLocation(), EntityType.ARMOR_STAND);
+			World w = p.getWorld();
+            Location chestLoc = new Location(w, p.getLocation().getX(), p.getLocation().getY(), p.getLocation().getZ());
+            chestLoc.getBlock().setType(Material.CHEST);
+			ArmorStand hologram  = (ArmorStand) p.getWorld().spawnEntity(p.getLocation().add(0, -1, 0), EntityType.ARMOR_STAND);
 			hologram.setVisible(false);
 			hologram.setCustomNameVisible(true);
+			hologram.setCustomName(ChatColor.BLUE + "<" + ChatColor.RED + "CRATES" + ChatColor.BLUE + ">");
 			hologram.setGravity(false);
-			hologram.setCustomName(ChatColor.translateAlternateColorCodes('&',"&L&1<&CMINE&1CRITICAL &CCRATES&1>"));
+			
 		}
 		return true;
 	}
