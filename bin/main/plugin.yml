@@ -6,3 +6,5 @@ main: cratesPackage.CratesMain
 commands:
  crates:
    description: shows your crate key balance
+ cspawn:
+   description: spawns in a crate  
