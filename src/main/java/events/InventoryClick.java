@@ -25,24 +25,25 @@ public class InventoryClick implements Listener{
 				case STAINED_GLASS_PANE:
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "LEGENDARY CRATE")) {
 						if(plugin.cM.Legendary.get(p.getUniqueId().toString()) > 0) {
-							p.sendMessage("TESTING1");
+							plugin.cM.Legendary.put(p.getUniqueId().toString(), plugin.cM.Legendary.get(p.getUniqueId().toString())-1);
+							p.sendMessage("USED LEGENDARY");
 						}
 					}
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "EXOTIC CRATE")) {
 						if(plugin.cM.Exotic.get(p.getUniqueId().toString()) > 0) {
-							p.sendMessage("TESTING2");
+							p.sendMessage("USED EXOTIC");
 						}
 					}
 
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "DAILY CRATE")) {
 						if(plugin.cM.Daily.get(p.getUniqueId().toString()) > 0) {
-							p.sendMessage("TESTING3");
+							p.sendMessage("USED DAILY");
 						}
 					}
 					
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "TYSON CRATE")) {
 						if(plugin.cM.Tyson.get(p.getUniqueId().toString()) > 0) {
-							p.sendMessage("TESTING4");
+							p.sendMessage("USED TYSON");
 						}
 					}
 					p.closeInventory();
