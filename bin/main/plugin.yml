@@ -3,7 +3,7 @@ description: wdym?
 author: yeboiCravez
 version: 1.0
 main: cratesPackage.CratesMain
-depend: [PowerUpsPL]
+depend: [PowerUpsPL, LevelsPlugin]
 commands:
  crates:
    description: shows your crate key balance

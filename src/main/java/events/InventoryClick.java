@@ -29,15 +29,45 @@ public class InventoryClick implements Listener{
 							p.sendMessage("USED LEGENDARY");
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);
 							 if(rando <= 45) {
-								 p.sendMessage("YOU GOT NINJA");
+								 if(!plugin.api.puM.powerUps.get("NINJA").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &0NINJA"));
+									 plugin.api.puM.powerUps.get("NINJA").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &0NINJA&6, &1200xp &Lhas been credited in replacement!"));
+									 plugin.api2.lM.addXp(p, 200);
+								 }
 							 } else if(rando > 45 && rando <= 90) {
-								 p.sendMessage("YOU GOT TANK");
+								 if(!plugin.api.puM.powerUps.get("TANK").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &2TANK"));
+									 plugin.api.puM.powerUps.get("TANK").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &2TANK&6, &1200xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 200);
+								 }
 							 } else if(rando > 90 && rando <= 93) {
-								 p.sendMessage("YOU GOT GRENADIER");
+								 if(!plugin.api.puM.powerUps.get("GRENADIER").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &AGRENADIER"));
+									 plugin.api.puM.powerUps.get("GRENADIER").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &AGRENADIER&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 93 && rando <= 96) {
-								 p.sendMessage("YOU GOT GHOST");
+								 if(!plugin.api.puM.powerUps.get("GHOST").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &7GHOST"));
+									 plugin.api.puM.powerUps.get("GHOST").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &7GHOST&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 96 && rando <= 100) {
-								 p.sendMessage("YOU GOT FREEZE");
+								 if(!plugin.api.puM.powerUps.get("FREEZE").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &1FREEZE"));
+									 plugin.api.puM.powerUps.get("FREEZE").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &1FREEZE&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 }
 						}
 					}
@@ -47,27 +77,93 @@ public class InventoryClick implements Listener{
 							p.sendMessage("USED EXOTIC");
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);
 							 if(rando <= 1) {
-								 p.sendMessage("YOU GOT NURSE");
+								 if(!plugin.api.puM.powerUps.get("NURSE").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &CNURSE"));
+									 plugin.api.puM.powerUps.get("NURSE").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &CNURSE&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 1 && rando <= 2) {
-								 p.sendMessage("YOU GOT HULK");
+								 if(!plugin.api.puM.powerUps.get("HULK").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &2HULK"));
+									 plugin.api.puM.powerUps.get("HULK").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &2HULK&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 2 && rando <= 3) {
-								 p.sendMessage("YOU GOT CHEMIST");
+								 if(!plugin.api.puM.powerUps.get("CHEMIST").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &5CHEMIST"));
+									 plugin.api.puM.powerUps.get("CHEMIST").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &5CHEMIST&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 3 && rando <= 5) {
-								 p.sendMessage("YOU GOT ARCHER");
+								 if(!plugin.api.puM.powerUps.get("ARCHER").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &8ARCHER"));
+									 plugin.api.puM.powerUps.get("ARCHER").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &8ARCHER&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 5 && rando <= 10) {
-								 p.sendMessage("YOU GOT GRENADIER");
+								 if(!plugin.api.puM.powerUps.get("GRENADIER").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &AGRENADIER"));
+									 plugin.api.puM.powerUps.get("GRENADIER").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &AGRENADIER&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 10 && rando <= 15) {
-								 p.sendMessage("YOU GOT GHOST");
+								 if(!plugin.api.puM.powerUps.get("GHOST").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &7GHOST"));
+									 plugin.api.puM.powerUps.get("GHOST").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &7GHOST&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 15 && rando <= 20) {
-								 p.sendMessage("YOU GOT FREEZE");
+								 if(!plugin.api.puM.powerUps.get("FREEZE").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &1FREEZE"));
+									 plugin.api.puM.powerUps.get("FREEZE").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &1FREEZE&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 20 && rando <= 40) {
-								 p.sendMessage("YOU GOT FIREBALL");
+								 if(!plugin.api.puM.powerUps.get("FIREBALL").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &4FIREBALL"));
+									 plugin.api.puM.powerUps.get("FIREBALL").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &4FIREBALL&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 } else if(rando > 40 && rando <= 60) {
-								 p.sendMessage("YOU GOT SNOWMAN");
+								 if(!plugin.api.puM.powerUps.get("SNOWMAN").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &1SNOWMAN"));
+									 plugin.api.puM.powerUps.get("SNOWMAN").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &1SNOWMAN&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 } else if(rando > 60 && rando <= 80) {
-								 p.sendMessage("YOU GOT FLASH");
+								 if(!plugin.api.puM.powerUps.get("FLASH").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &EFLASH"));
+									 plugin.api.puM.powerUps.get("FLASH").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &EFLASH&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 } else if(rando > 80 && rando <= 100) {
-								 p.sendMessage("YOU GOT TOXIN");
+								 if(!plugin.api.puM.powerUps.get("TOXIN").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &ATOXIN"));
+									 plugin.api.puM.powerUps.get("TOXIN").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &ATOXIN&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 }
 						}
 					}
@@ -78,21 +174,69 @@ public class InventoryClick implements Listener{
 							p.sendMessage("USED DAILY");
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);
 							 if(rando <= 20) {
-								 p.sendMessage("YOU GOT NURSE");
+								 if(!plugin.api.puM.powerUps.get("NURSE").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &CNURSE"));
+									 plugin.api.puM.powerUps.get("NURSE").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &CNURSE&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 20 && rando <= 40) {
-								 p.sendMessage("YOU GOT CHEMIST");
+								 if(!plugin.api.puM.powerUps.get("CHEMIST").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &5CHEMIST"));
+									 plugin.api.puM.powerUps.get("CHEMIST").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &5CHEMIST&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 40 && rando <= 60) {
-								 p.sendMessage("YOU GOT ARCHER");
+								 if(!plugin.api.puM.powerUps.get("ARCHER").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &8ARCHER"));
+									 plugin.api.puM.powerUps.get("ARCHER").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &8ARCHER&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 60 && rando <= 80) {
-								 p.sendMessage("YOU GOT HULK");
+								 if(!plugin.api.puM.powerUps.get("HULK").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &2HULK"));
+									 plugin.api.puM.powerUps.get("HULK").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &2HULK&6, &120xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 20);
+								 }
 							 } else if(rando > 80 && rando <= 85) {
-								 p.sendMessage("YOU GOT FIREBALL");
+								 if(!plugin.api.puM.powerUps.get("FIREBALL").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &4FIREBALL"));
+									 plugin.api.puM.powerUps.get("FIREBALL").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &4FIREBALL&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 } else if(rando > 85 && rando <= 90) {
-								 p.sendMessage("YOU GOT TOXIN");
+								 if(!plugin.api.puM.powerUps.get("TOXIN").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &ATOXIN"));
+									 plugin.api.puM.powerUps.get("TOXIN").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &ATOXIN&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 } else if(rando > 90 && rando <= 95) {
-								 p.sendMessage("YOU GOT SNOWMAN");
+								 if(!plugin.api.puM.powerUps.get("SNOWMAN").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &1SNOWMAN"));
+									 plugin.api.puM.powerUps.get("SNOWMAN").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &1SNOWMAN&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 } else if(rando > 95 && rando <= 100) {
-								 p.sendMessage("YOU GOT FLASH");
+								 if(!plugin.api.puM.powerUps.get("FLASH").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &EFLASH"));
+									 plugin.api.puM.powerUps.get("FLASH").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &EFLASH&6, &150xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 50);
+								 }
 							 }
 						}
 					}
@@ -103,15 +247,45 @@ public class InventoryClick implements Listener{
 							p.sendMessage("USED TYSON");
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);
 							 if(rando <= 30) {
-								 p.sendMessage("YOU GOT GRENADIER");
+								 if(!plugin.api.puM.powerUps.get("GRENADIER").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &AGRENADIER"));
+									 plugin.api.puM.powerUps.get("GRENADIER").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &AGRENADIER&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 30 && rando <= 60) {
-								 p.sendMessage("YOU GOT GHOST");
+								 if(!plugin.api.puM.powerUps.get("GHOST").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &7GHOST"));
+									 plugin.api.puM.powerUps.get("GHOST").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &7GHOST&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 60 && rando <= 90) {
-								 p.sendMessage("YOU GOT FREEZE");
+								 if(!plugin.api.puM.powerUps.get("FREEZE").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &1FREEZE"));
+									 plugin.api.puM.powerUps.get("FREEZE").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &1FREEZE&6, &1100xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 100);
+								 }
 							 } else if(rando > 90 && rando <= 95) {
-								 p.sendMessage("YOU GOT NINJA");
+								 if(!plugin.api.puM.powerUps.get("NINJA").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &0NINJA"));
+									 plugin.api.puM.powerUps.get("NINJA").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &0NINJA&6, &1200xp &Lhas been credited in replacement!"));
+									 plugin.api2.lM.addXp(p, 200);
+								 }
 							 } else if(rando > 95 && rando <= 100) {
-								 p.sendMessage("YOU GOT TANK");
+								 if(!plugin.api.puM.powerUps.get("TANK").contains(p)) {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6 YOU HAVE RECEIVED &2TANK"));
+									 plugin.api.puM.powerUps.get("TANK").add(p);
+								 } else {
+									 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&L&6You already have &2TANK&6, &1200xp &Lhas been credited to you in replacement!"));
+									 plugin.api2.lM.addXp(p, 200);
+								 }
 							 }
 						}
 					}

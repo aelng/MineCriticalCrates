@@ -7,11 +7,13 @@ import commands.CrateBalanceCommand;
 import commands.SpawnCrate;
 import events.InventoryClick;
 import events.OpenChest;
+import mainPackage.LevelMain;
 import mainPackage.PowerUpsMain;
 
 public class CratesMain extends JavaPlugin{
 	public CratesManager cM;
 	public PowerUpsMain api = (PowerUpsMain) Bukkit.getServer().getPluginManager().getPlugin("PowerUpsPL");
+	public LevelMain api2 = (LevelMain) Bukkit.getServer().getPluginManager().getPlugin("LevelsPlugin");
 	
 	public void onEnable() {
 		cM = new CratesManager(this);
