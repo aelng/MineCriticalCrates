@@ -23,7 +23,7 @@ CratesMain plugin;
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(sender instanceof Player) {
 			Player p = (Player) sender;
-			
+			if(p.hasPermission("crateplugin.cheats")) {
 			World w = p.getWorld();
             Location chestLoc = new Location(w, p.getLocation().getX(), p.getLocation().getY(), p.getLocation().getZ());
             chestLoc.getBlock().setType(Material.ENDER_CHEST);
@@ -32,7 +32,7 @@ CratesMain plugin;
 			hologram.setCustomNameVisible(true);
 			hologram.setCustomName(ChatColor.BLUE + "<" + ChatColor.RED + "CRATES" + ChatColor.BLUE + ">");
 			hologram.setGravity(false);
-			
+			}
 		}
 		return true;
 	}
