@@ -8,4 +8,6 @@ commands:
  crates:
    description: shows your crate key balance
  cspawn:
-   description: spawns in a crate  
+   description: spawns in a crate
+ cgive:
+   description: gives a crate to someone  

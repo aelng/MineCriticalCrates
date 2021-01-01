@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import commands.CrateBalanceCommand;
+import commands.CrateCheat;
 import commands.SpawnCrate;
 import events.InventoryClick;
 import events.OpenChest;
@@ -19,6 +20,7 @@ public class CratesMain extends JavaPlugin{
 		cM = new CratesManager(this);
 		getCommand("crates").setExecutor(new CrateBalanceCommand(this));
 		getCommand("cspawn").setExecutor(new SpawnCrate(this));
+		getCommand("cgive").setExecutor(new CrateCheat(this));
 		getServer().getPluginManager().registerEvents(new OpenChest(this), this);
 		getServer().getPluginManager().registerEvents(new InventoryClick(this), this);
 		
