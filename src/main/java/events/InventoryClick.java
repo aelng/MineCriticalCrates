@@ -1,6 +1,7 @@
 package events;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -25,6 +26,7 @@ public class InventoryClick implements Listener{
 				case STAINED_GLASS_PANE:
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "LEGENDARY CRATE")) {
 						if(plugin.cM.Legendary.get(p.getUniqueId().toString()) > 0) {
+							p.playSound(p.getLocation(), Sound.EXPLODE, 1.0F, 1.0F);
 							plugin.cM.Legendary.put(p.getUniqueId().toString(), plugin.cM.Legendary.get(p.getUniqueId().toString())-1);
 							p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&LUSED &6&LLEGENDARY"));
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);
@@ -73,6 +75,7 @@ public class InventoryClick implements Listener{
 					}
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "EXOTIC CRATE")) {
 						if(plugin.cM.Exotic.get(p.getUniqueId().toString()) > 0) {
+							p.playSound(p.getLocation(), Sound.EXPLODE, 1.0F, 1.0F);
 							plugin.cM.Exotic.put(p.getUniqueId().toString(), plugin.cM.Exotic.get(p.getUniqueId().toString())-1);
 							p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&LUSED &5&LEXOTIC"));
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);
@@ -170,6 +173,7 @@ public class InventoryClick implements Listener{
 
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.GRAY + "DAILY CRATE")) {
 						if(plugin.cM.Daily.get(p.getUniqueId().toString()) > 0) {
+							p.playSound(p.getLocation(), Sound.EXPLODE, 1.0F, 1.0F);
 							plugin.cM.Daily.put(p.getUniqueId().toString(), plugin.cM.Daily.get(p.getUniqueId().toString())-1);
 							p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&LUSED &7&LDAILY"));
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);
@@ -243,6 +247,7 @@ public class InventoryClick implements Listener{
 					
 					if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.DARK_RED + "TYSON CRATE")) {
 						if(plugin.cM.Tyson.get(p.getUniqueId().toString()) > 0) {
+							p.playSound(p.getLocation(), Sound.EXPLODE, 1.0F, 1.0F);
 							plugin.cM.Tyson.put(p.getUniqueId().toString(), plugin.cM.Tyson.get(p.getUniqueId().toString())-1);
 							p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&LUSED &4&LTYSON"));
 							int rando = ((int) ((Math.random()*(100 - 1))) + 1);

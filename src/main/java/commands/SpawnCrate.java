@@ -26,7 +26,7 @@ CratesMain plugin;
 			
 			World w = p.getWorld();
             Location chestLoc = new Location(w, p.getLocation().getX(), p.getLocation().getY(), p.getLocation().getZ());
-            chestLoc.getBlock().setType(Material.CHEST);
+            chestLoc.getBlock().setType(Material.ENDER_CHEST);
 			ArmorStand hologram  = (ArmorStand) p.getWorld().spawnEntity(p.getLocation().add(0, -1, 0), EntityType.ARMOR_STAND);
 			hologram.setVisible(false);
 			hologram.setCustomNameVisible(true);

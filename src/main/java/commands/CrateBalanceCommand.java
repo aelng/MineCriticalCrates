@@ -19,13 +19,13 @@ CratesMain plugin;
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(sender instanceof Player) {
 			Player player = (Player) sender; 
-			if(plugin.cM.Daily.get(player.getUniqueId().toString()) == null){
+			if(plugin.cM.Daily.get(player.getUniqueId().toString()) == null || plugin.cM.Legendary.get(player.getUniqueId().toString()) == null
+					|| plugin.cM.Exotic.get(player.getUniqueId().toString()) == null || plugin.cM.Tyson.get(player.getUniqueId().toString()) == null){
 				plugin.cM.Daily.put(player.getUniqueId().toString(), 100);
 				plugin.cM.Exotic.put(player.getUniqueId().toString(), 100);
 				plugin.cM.Tyson.put(player.getUniqueId().toString(), 100);
 				plugin.cM.Legendary.put(player.getUniqueId().toString(), 100);
 			}
-			
 			player.sendMessage(ChatColor.DARK_GRAY + "-------" + ChatColor.RED + "<" + ChatColor.BLUE + "CRATE" + ChatColor.RED + "KEYS" + ChatColor.BLUE + ">" + ChatColor.DARK_GRAY + "-------");
 			player.sendMessage(ChatColor.GRAY + "Daily" + ChatColor.YELLOW + "Crates" + ChatColor.GRAY + ": " + ChatColor.GOLD + plugin.cM.Daily.get(player.getUniqueId().toString()));
 			player.sendMessage(ChatColor.DARK_PURPLE + "Exotic" + ChatColor.YELLOW + "Crates" + ChatColor.GRAY + ": " + ChatColor.GOLD + plugin.cM.Exotic.get(player.getUniqueId().toString()));
